@@ -1,0 +1,5 @@
+29 Aug 2017 09:59:44,152 INFO  ~ Starting C:\Users\mhasan\Documents\play-1.4.4\yabe
+29 Aug 2017 09:59:44,877 WARN  ~ You're running Play! in DEV mode
+29 Aug 2017 09:59:45,084 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+29 Aug 2017 09:59:55,451 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0 for default
+29 Aug 2017 09:59:56,279 INFO  ~ Application 'yabe' is now started !
