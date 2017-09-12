@@ -6,6 +6,7 @@ import play.libs.Images;
 import play.libs.*;
 import play.mvc.*;
 import play.cache.*;
+import play.data.validation.*;
 
 import java.util.*;
 
@@ -34,9 +35,13 @@ public class Application extends Controller {
         render(post);
     }
 
-    public static void postComment(Long postId, String author, String content) {
+    public static void postComment(Long postId, @Required String author, @Required String content) {
         Post post = Post.findById(postId);
+        if (validation.hasErrors()) {
+            render("Application/show.html", post);
+        }
         post.addComment(author, content);
+        flash.success("Thanks for posting %s", author);
         show(postId);
     }
 
